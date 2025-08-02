@@ -46,15 +46,13 @@ Make sure to have your sequences located in the same directory as sangseqfuse.sh
 ```bash
 ./sangseqfuse.sh --forward F.ab1 --reverse R.ab1 --prefix Sample1 --output myconsensus.fasta
 ```
-
-
-## Parameters
+Parameters
 
 | Flag              | Description                                 |
 | ----------------- | ------------------------------------------- |
 | `-f`, `--forward` | Path to the forward `.ab1` file             |
 | `-r`, `--reverse` | Path to the reverse `.ab1` file             |
-| `-p`, `--prefix`  | Prefix for intermediate/final file labeling |
+| `-p`, `--prefix`  | Prefix for intermediate/final file labeling (this will also be your fasta header|
 | `-o`, `--output`  | Name of the output consensus FASTA file     |
 | `-h`, `--help`    | Show usage information                      |
 
