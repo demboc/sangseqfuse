@@ -52,7 +52,7 @@ Parameters
 | ----------------- | ------------------------------------------- |
 | `-f`, `--forward` | Path to the forward `.ab1` file             |
 | `-r`, `--reverse` | Path to the reverse `.ab1` file             |
-| `-p`, `--prefix`  | Prefix for intermediate/final file labeling (this will also be your fasta header|
+| `-p`, `--prefix`  | Prefix for intermediate/final file labeling (this will also be your fasta header)|
 | `-o`, `--output`  | Name of the output consensus FASTA file     |
 | `-h`, `--help`    | Show usage information                      |
 
