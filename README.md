@@ -42,8 +42,10 @@ chmod +x sangseqfuse.sh
 ## Usage
 
 Make sure to have your sequences located in the same directory as sangseqfuse.sh or you can have sangseqfuse.sh installed in your $PATH
-./sangseqfuse.sh --forward F.ab1 --reverse R.ab1 --prefix Sample1 --output myconsensus.fasta
 
+```bash
+./sangseqfuse.sh --forward F.ab1 --reverse R.ab1 --prefix Sample1 --output myconsensus.fasta
+```
 
 
 ## Parameters
