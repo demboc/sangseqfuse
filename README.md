@@ -2,6 +2,7 @@
 
 **SangSeqFuse** is a lightweight Bash script that converts forward and reverse Sanger sequencing trace files (`.ab1`) into a consensus FASTA sequence. It performs sequence extraction, reverse complementing, pair-wise alignment, and consensus generation — all in one command-line tool. Popular tools like CAP3 or Phred/Phrap/Consed for creating consensus sequences can often be overly strict or complex for basic Sanger read merging — especially when dealing with short, noisy reads or small-scale sequencing. This tool fixes that problem, especially if the goal to simply create a consensus sequence for performing nBLAST or for building phylogenetic trees.
 
+---
 
 ## Features
 
@@ -12,6 +13,7 @@
 - Generates a consensus sequence using **EMBOSS cons**
 - Saves intermediate files and final output in organized directories
 
+---
 
 ## Requirements
 
@@ -35,6 +37,7 @@ git clone https://github.com/yourusername/sangseqfuse.git
 cd sangseqfuse
 chmod +x sangseqfuse.sh
 ```
+---
 
 ## Usage
 ./sangseqfuse.sh --forward F.ab1 --reverse R.ab1 --prefix Sample1 --output myconsensus.fasta
