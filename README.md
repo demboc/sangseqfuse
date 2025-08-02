@@ -33,7 +33,7 @@ Make sure the following tools are installed and accessible in your `$PATH`:
 Clone the repository and make the script executable:
 
 ```bash
-git clone https://github.com/yourusername/sangseqfuse.git
+git clone https://github.com/demboc/sangseqfuse
 cd sangseqfuse
 chmod +x sangseqfuse.sh
 ```
