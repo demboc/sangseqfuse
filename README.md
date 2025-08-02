@@ -19,10 +19,10 @@ Make sure the following tools are installed and accessible in your `$PATH`:
 
 | Tool        | Description                              |
 |-------------|------------------------------------------|
-| `[mafft](https://mafft.cbrc.jp/alignment/software/)`     | Multiple sequence alignment              |
-| `[cons]`(https://www.bioinformatics.nl/cgi-bin/emboss/help/cons)      | EMBOSS tool to generate consensus        |
-| `[seqret]`(https://www.bioinformatics.nl/cgi-bin/emboss/help/seqret)    | EMBOSS tool for sequence transformation  |
-| `[biopython]`(https://biopython.org/)   | for parsing |
+| [mafft](https://mafft.cbrc.jp/alignment/software/)     | Multiple sequence alignment              |
+| [cons](https://www.bioinformatics.nl/cgi-bin/emboss/help/cons)      | EMBOSS tool to generate consensus        |
+| [seqret](https://www.bioinformatics.nl/cgi-bin/emboss/help/seqret)    | EMBOSS tool for sequence transformation  |
+| [biopython](https://biopython.org/)   | for parsing |
 
 ---
  
