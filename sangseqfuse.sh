@@ -18,6 +18,7 @@ while [[ "$#" -gt 0 ]]; do
         -h|--help)
             echo "Usage: $0 -f <forward.ab1> -r <reverse.ab1> -p <prefix> -o <output.fasta>"
             echo "Example: ./sangseqfuse.sh --forward F.ab1 --reverse R.ab1 --prefix Sample1 --output consensus.fasta"
+            echo "<prefix> will also be set as your sequence header
             exit 0
             ;;
         *) echo "Unknown parameter passed: $1"; exit 1 ;;
