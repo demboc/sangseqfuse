@@ -18,7 +18,7 @@ while [[ "$#" -gt 0 ]]; do
         -h|--help)
             echo "Usage: $0 -f <forward.ab1> -r <reverse.ab1> -p <prefix> -o <output.fasta>"
             echo "Example: ./sangseqfuse.sh --forward F.ab1 --reverse R.ab1 --prefix Sample1 --output consensus.fasta"
-            echo "<prefix> will also be set as your sequence header
+            echo "<prefix> will also be set as your sequence header"
             exit 0
             ;;
         *) echo "Unknown parameter passed: $1"; exit 1 ;;
@@ -42,7 +42,7 @@ for cmd in mafft cons seqret; do
 done
 
 # Create Temporary Directory
-TMP_DIR="intemediates/${PREFIX}"
+TMP_DIR="intermediates/${PREFIX}"
 mkdir -p "$TMP_DIR"
 mkdir -p "$(dirname "$OUTPUT_FASTA")" 2>/dev/null || true
 
@@ -61,7 +61,7 @@ sed -i "s/^>.*/>${PREFIX}_reverse/" "$TMP_DIR/${PREFIX}_reverse_raw.fasta"
 # Step 3: Reverse-complement the reverse read
 seqret -sequence "$TMP_DIR/${PREFIX}_reverse_raw.fasta" \
        -outseq "$TMP_DIR/${PREFIX}_reversecomplement.fasta" \
-       -sreverse Y
+       -srev
 
 # Step 4: Concatenate both sequences
 cat "$TMP_DIR/${PREFIX}_forward.fasta" "$TMP_DIR/${PREFIX}_reversecomplement.fasta" > "$TMP_DIR/${PREFIX}_combined.fasta"
@@ -80,7 +80,7 @@ mkdir -p "$FINAL_DIR"
 
 TEMP_CONSENSUS="$TMP_DIR/${PREFIX}_rawcons.fasta"
 FORMATTED_CONSENSUS="$TMP_DIR/${PREFIX}_consensus_final.fasta"
-sed '/^>/!s/[a-z]/\U&/g' "$TEMP_CONSENSUS" > "$FORMATTED_CONSENSUS"
+awk '/^>/{print; next} {print toupper($0)}' "$TEMP_CONSENSUS" > "$FORMATTED_CONSENSUS"
 
 # Step 8: Move final consensus to output directory
 FINAL_OUTPUT_PATH="${FINAL_DIR}/$(basename "$OUTPUT_FASTA")"
